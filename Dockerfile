@@ -1,9 +1,7 @@
-FROM node:bookworm-slim AS builder
+FROM oven/bun:1 AS builder
 ENV NODE_ENV=production
 WORKDIR /app
-RUN curl -fsSL https://bun.sh/install | bash
-ENV PATH="/root/.bun/bin:$PATH"
-COPY ["package.json", "bun.lock", "./"]
+COPY package.json bun.lock ./
 RUN bun install
 COPY . .
 RUN bun run build
