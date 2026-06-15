@@ -6,4 +6,6 @@ RUN bun install
 COPY . .
 RUN bun run build
 EXPOSE 3000
-CMD ["bun", "run", "start"]
+ENV HOST=0.0.0.0
+ENV PORT=3000
+CMD ["bun", "run", "index.ts"]
