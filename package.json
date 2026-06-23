@@ -4,7 +4,7 @@
   "version": "7.0.0",
   "scripts": {
     "dev": "astro dev",
-    "start": "bun run index.ts",
+    "start": "bun index.js",
     "build": "astro build",
     "preview": "astro preview",
     "typecheck": "astro check",
